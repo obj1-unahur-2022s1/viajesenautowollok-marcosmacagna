@@ -110,3 +110,28 @@ test "Roxana remisera de primera opcion y Juana remisera de segunda opcion,
 	assert.notThat(oficina.segundaRemiseraMenorPrecioPrimeraRemisera(teresa, 4))
 	assert.equals(roxana, oficina.remiseraElegidaParaViaje(teresa, 4))
 }
+
+test "Cambia la primera remisera" {
+	
+	oficina.asignarRemiseras(roxana, juana)
+	oficina.cambiarPrimerRemiserarPor(gabriela)
+	
+	assert.equals(gabriela, oficina.primeraRemisera())
+}
+
+test "Cambia la segunda remisera" {
+	
+	oficina.asignarRemiseras(roxana, juana)
+	oficina.cambiarSegundaRemiseraPor(gabriela)
+	
+	assert.equals(gabriela, oficina.segundaRemisera())
+}
+
+test "Intercambia primera remisera y segunda" {
+	
+	oficina.asignarRemiseras(roxana, juana)
+	oficina.intercambiarRemiseras()
+	
+	assert.equals(juana, oficina.primeraRemisera())
+	assert.equals(roxana, oficina.segundaRemisera())
+}
