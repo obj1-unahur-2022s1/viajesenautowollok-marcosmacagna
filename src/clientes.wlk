@@ -30,3 +30,15 @@ object teresa {
 		valorViaje = nuevoValor
 	}
 }
+
+object melina {
+	var trabajaPara
+	
+	method trabajaPara(clienta) {
+		trabajaPara = clienta
+	}
+	
+	method trabajaPara() = trabajaPara
+	
+	method valorViaje() = trabajaPara.valorViaje() - 3
+}

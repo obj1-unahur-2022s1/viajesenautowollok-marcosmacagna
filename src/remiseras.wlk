@@ -39,3 +39,17 @@ object juana {
 		}
 	}
 }
+
+object lucia {
+	var reemplazaA
+	
+	method precioViaje(cliente,kms) {
+		return reemplazaA.precioViaje(cliente,kms)
+	}
+	
+	method reemplazaA(remisera) {
+		reemplazaA = remisera
+	}
+	
+	method reemplazaA() = reemplazaA
+}
