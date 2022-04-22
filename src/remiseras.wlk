@@ -9,6 +9,10 @@ object roxana {
 	method precioViaje(cliente,kms) {
 		return cliente.valorViaje() * kms
 	}
+	
+	method reemplazaA(remisera) {}
+	
+	method reemplazaA() {}
 }
 
 object gabriela {
@@ -16,6 +20,10 @@ object gabriela {
 	method precioViaje(cliente,kms) {
 		return (cliente.valorViaje() * kms) * 1.2
 	}
+	
+	method reemplazaA(remisera) {}
+	
+	method reemplazaA() {}
 }
 
 object mariela {
@@ -27,6 +35,10 @@ object mariela {
 			return cliente.valorViaje() * kms
 		}
 	}
+	
+	method reemplazaA(remisera) {}
+	
+	method reemplazaA() {}
 }
 
 object juana {
@@ -38,6 +50,10 @@ object juana {
 			return 200
 		}
 	}
+	
+	method reemplazaA(remisera) {}
+	
+	method reemplazaA() {}
 }
 
 object lucia {

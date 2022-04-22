@@ -1,6 +1,16 @@
 object ludmila {
 	
 	method valorViaje() = 18
+	
+	method economiaEstable() {}
+	
+	method cambiarEconomiaEstable() {}
+	
+	method valorViaje(nuevoValor) {}
+	
+	method trabajaPara(clienta) {}
+	
+	method trabajaPara(){}
 }
 
 object anaMaria {
@@ -19,6 +29,12 @@ object anaMaria {
 			return 25
 		}
 	}
+	
+	method valorViaje(nuevoValor) {}
+	
+	method trabajaPara(clienta) {}
+	
+	method trabajaPara(){}
 }
 
 object teresa {
@@ -29,6 +45,14 @@ object teresa {
 	method valorViaje(nuevoValor) {
 		valorViaje = nuevoValor
 	}
+	
+	method trabajaPara(clienta) {}
+	
+	method trabajaPara(){}
+	
+	method economiaEstable() {}
+	
+	method cambiarEconomiaEstable() {}
 }
 
 object melina {
@@ -41,4 +65,10 @@ object melina {
 	method trabajaPara() = trabajaPara
 	
 	method valorViaje() = trabajaPara.valorViaje() - 3
+	
+	method valorViaje(nuevoValor) {}
+	
+	method economiaEstable() {}
+	
+	method cambiarEconomiaEstable() {}
 }
