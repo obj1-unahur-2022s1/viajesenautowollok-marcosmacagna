@@ -1,9 +1,8 @@
 import remiseras.*
 import clientes.*
+import oficina.*
 
 test "Viaje de 10 kms con cada remisera" {
-	
-	anaMaria.cambiarEconomiaEstable()
 	
 	assert.equals(180, roxana.precioViaje(ludmila, 10))
 	assert.equals(300, roxana.precioViaje(anaMaria, 10))
@@ -25,8 +24,6 @@ test "Viaje de 10 kms con cada remisera" {
 
 test "Viaje de 2 kms con cada remisera" {
 	
-	anaMaria.cambiarEconomiaEstable()
-	
 	assert.equals(36, roxana.precioViaje(ludmila, 2))
 	assert.equals(60, roxana.precioViaje(anaMaria, 2))
 	assert.equals(44, roxana.precioViaje(teresa, 2))
@@ -44,11 +41,20 @@ test "Viaje de 2 kms con cada remisera" {
 	assert.equals(100, juana.precioViaje(teresa, 2))
 }
 
-test "Cambio al valor del viaje de teresa" {
+test "Cambia el valor del viaje de teresa" {
 	
 	teresa.valorViaje(50)
 	
 	assert.equals(50, teresa.valorViaje())
+}
+
+test "Cambia la economia de anaMaria" {
+	
+	assert.that(anaMaria.economiaEstable())
+	
+	anaMaria.cambiarEconomiaEstable()
+	
+	assert.notThat(anaMaria.economiaEstable())
 }
 
 test "Lucia reemplaza a Mariela y Melina trabaja para Ludmila, por un viaje de
@@ -69,4 +75,38 @@ test "Lucia reemplaza a Gabriela y Melina trabaja para Ludmila, por un viaje de
 	
 	assert.equals(180, lucia.precioViaje(melina,10))
 	assert.equals(18, lucia.precioViaje(melina,1))		  	
+}
+
+test "Roxana remisera de primera opcion y Juana remisera de segunda opcion,
+      para un viaje de 10 kms para anaMaria" {
+	
+	oficina.asignarRemiseras(roxana, juana)
+	
+	assert.equals(juana, oficina.remiseraElegidaParaViaje(anaMaria, 10))
+	assert.equals(200, juana.precioViaje(anaMaria, 10))
+	assert.equals(300, roxana.precioViaje(anaMaria, 10))
+	assert.that(oficina.diferenciaDePrecios(anaMaria, 10) > 30)	
+}
+
+test "Roxana remisera de primera opcion y Juana remisera de segunda opcion,
+      para un viaje de 10 kms para Teresa" {
+      	
+	oficina.asignarRemiseras(roxana, juana)
+	
+	assert.equals(220, roxana.precioViaje(teresa, 10))
+	assert.equals(200, juana.precioViaje(teresa, 10))
+	assert.that(oficina.segundaRemiseraMenorPrecioPrimeraRemisera(teresa, 10))
+	assert.that(oficina.diferenciaDePrecios(teresa, 10) < 30)
+	assert.equals(roxana, oficina.remiseraElegidaParaViaje(teresa, 10))	
+}
+
+test "Roxana remisera de primera opcion y Juana remisera de segunda opcion,
+      para un viaje de 4 kms para Teresa" {
+	
+	oficina.asignarRemiseras(roxana, juana)
+	
+	assert.equals(88, roxana.precioViaje(teresa, 4))
+	assert.equals(100, juana.precioViaje(teresa, 4))
+	assert.notThat(oficina.segundaRemiseraMenorPrecioPrimeraRemisera(teresa, 4))
+	assert.equals(roxana, oficina.remiseraElegidaParaViaje(teresa, 4))
 }

@@ -4,7 +4,7 @@ object ludmila {
 }
 
 object anaMaria {
-	var economiaEstable = false
+	var economiaEstable = true
 	
 	method economiaEstable() = economiaEstable
 	
