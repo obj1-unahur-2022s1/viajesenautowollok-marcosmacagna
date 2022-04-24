@@ -14,6 +14,12 @@ object ludmila {
 }
 
 object anaMaria {
+	/**
+	 *	Como en la consigna, en la parte de los test de 10 kms dice 
+	 *	"se supone que Ana María está económicamente estable", 
+	 *	asumí que la var economiaEstable, debia inicializar en true
+	 */
+	
 	var economiaEstable = true
 	
 	method economiaEstable() = economiaEstable

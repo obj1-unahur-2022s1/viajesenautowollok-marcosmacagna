@@ -29,11 +29,7 @@ object gabriela {
 object mariela {
 	
 	method precioViaje(cliente,kms) {
-		if(cliente.valorViaje() * kms < 50) {
-			return 50
-		} else {
-			return cliente.valorViaje() * kms
-		}
+		return 50.max(cliente.valorViaje() * kms)
 	}
 	
 	method reemplazaA(remisera) {}
