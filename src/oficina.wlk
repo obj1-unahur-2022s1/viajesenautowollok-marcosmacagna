@@ -14,7 +14,7 @@ object oficina {
 		segundaRemisera = remisera2
 	}
 	
-	method cambiarPrimerRemiserarPor(remisera) {
+	method cambiarPrimeraRemiserarPor(remisera) {
 		primeraRemisera = remisera
 	}
 	

@@ -114,7 +114,7 @@ test "Roxana remisera de primera opcion y Juana remisera de segunda opcion,
 test "Cambia la primera remisera" {
 	
 	oficina.asignarRemiseras(roxana, juana)
-	oficina.cambiarPrimerRemiserarPor(gabriela)
+	oficina.cambiarPrimeraRemiserarPor(gabriela)
 	
 	assert.equals(gabriela, oficina.primeraRemisera())
 }
