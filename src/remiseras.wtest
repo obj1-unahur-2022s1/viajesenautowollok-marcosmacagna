@@ -1,3 +1,9 @@
+/*
+ * Test: Tené en cuenta intentar no mezclar en los test objetos que no estar relacionados
+ * Ej: en el test 10 kms con cada remisera lo ideal seria hacerlos independietnes para roxana, gabriela, marilea y juano
+ * y no hacer todos juntos en un único test
+ */
+
 import remiseras.*
 import clientes.*
 import oficina.*

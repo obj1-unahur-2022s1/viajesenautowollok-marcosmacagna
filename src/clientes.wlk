@@ -1,16 +1,11 @@
+/*
+ * OJO:El unico método polimorfico de los clientes es valorViaje()
+ * El resto de los métodos es propio de cada objeto, en este caso no deben estar replicados vacios en todos los objetos
+ */
 object ludmila {
 	
 	method valorViaje() = 18
 	
-	method economiaEstable() {}
-	
-	method cambiarEconomiaEstable() {}
-	
-	method valorViaje(nuevoValor) {}
-	
-	method trabajaPara(clienta) {}
-	
-	method trabajaPara(){}
 }
 
 object anaMaria {
@@ -36,11 +31,6 @@ object anaMaria {
 		}
 	}
 	
-	method valorViaje(nuevoValor) {}
-	
-	method trabajaPara(clienta) {}
-	
-	method trabajaPara(){}
 }
 
 object teresa {
@@ -52,13 +42,6 @@ object teresa {
 		valorViaje = nuevoValor
 	}
 	
-	method trabajaPara(clienta) {}
-	
-	method trabajaPara(){}
-	
-	method economiaEstable() {}
-	
-	method cambiarEconomiaEstable() {}
 }
 
 object melina {
@@ -72,9 +55,5 @@ object melina {
 	
 	method valorViaje() = trabajaPara.valorViaje() - 3
 	
-	method valorViaje(nuevoValor) {}
-	
-	method economiaEstable() {}
-	
-	method cambiarEconomiaEstable() {}
+
 }
