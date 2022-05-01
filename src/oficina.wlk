@@ -21,16 +21,9 @@ object oficina {
 	method cambiarSegundaRemiseraPor(remisera) {
 		segundaRemisera = remisera
 	}
-	
+	/*Este método esta mal debias reutilizar con self el método asignarRemiseras */
 	method intercambiarRemiseras() {
-		var remisera1
-		var remisera2
-		
-		remisera1 = primeraRemisera
-		remisera2 = segundaRemisera
-		
-		primeraRemisera = remisera2
-		segundaRemisera = remisera1
+		self.asignarRemiseras(segundaRemisera,primeraRemisera )
 	}
 	
 	method segundaRemiseraMenorPrecioPrimeraRemisera(cliente, kms) {

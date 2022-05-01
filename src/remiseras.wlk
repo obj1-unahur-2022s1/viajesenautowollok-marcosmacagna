@@ -1,3 +1,7 @@
+/*
+ * OJO:El unico método polimorfico de las remiseras es precioViaje(cliente,kms)
+ * El resto de los métodos es propio de cada objeto, en este caso no deben estar replicados vacios en todos los objetos
+ */
 import clientes.*
 
 /*
@@ -9,10 +13,6 @@ object roxana {
 	method precioViaje(cliente,kms) {
 		return cliente.valorViaje() * kms
 	}
-	
-	method reemplazaA(remisera) {}
-	
-	method reemplazaA() {}
 }
 
 object gabriela {
@@ -21,9 +21,6 @@ object gabriela {
 		return (cliente.valorViaje() * kms) * 1.2
 	}
 	
-	method reemplazaA(remisera) {}
-	
-	method reemplazaA() {}
 }
 
 object mariela {
@@ -32,9 +29,6 @@ object mariela {
 		return 50.max(cliente.valorViaje() * kms)
 	}
 	
-	method reemplazaA(remisera) {}
-	
-	method reemplazaA() {}
 }
 
 object juana {
@@ -47,9 +41,7 @@ object juana {
 		}
 	}
 	
-	method reemplazaA(remisera) {}
-	
-	method reemplazaA() {}
+
 }
 
 object lucia {
